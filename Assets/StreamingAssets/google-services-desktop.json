@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15524450682",
+    "project_id": "wall-is-you-a49a9",
+    "storage_bucket": "wall-is-you-a49a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15524450682:android:e9c2b9989423dbc08686c3",
+        "android_client_info": {
+          "package_name": "com.ZIVgames.wallisyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15524450682-5s6soc4feou9r84o6ka3vsqcnqhr10dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLDdCpGO0wB21WlHaUme--GP95uyXPI0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15524450682-5s6soc4feou9r84o6ka3vsqcnqhr10dl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
