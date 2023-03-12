@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class HintBehaviour : MonoBehaviour
 {
     [SerializeField] private MeshFilter meshFilter;
+    [SerializeField] private float deviation;
     private ObstacleService _obstacleService;
     private bool isDestroyed;
     public void SetObstacleService(ObstacleService obstacleService)
@@ -31,7 +32,7 @@ public class HintBehaviour : MonoBehaviour
     }
     public void OnObstacleChanged(float ZPosition)
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, ZPosition);
+        transform.position = new Vector3(transform.position.x, transform.position.y, ZPosition+ deviation);
     }
     public HintBehaviour Clone()
     {

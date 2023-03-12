@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshFilter: {fileID: 1497266260683131595}
+  deviation: 0
 --- !u!95 &387186026033326922
 Animator:
   serializedVersion: 5
