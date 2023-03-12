@@ -38,21 +38,20 @@ namespace Player
         public Score Score => score;
         public Death DeathBank => deathBank;
 
-        public void Construct(PositionController positionController,bool isPaused, bool isDead, Die die, Reborn reborn, PauseDelegate pauseDelegate)
+        public void Construct(PositionController positionController,bool isPaused, bool isDead, PauseDelegate pauseDelegate, Die die)
         {
             _positionController = positionController;
             _isPaused = isPaused;
             _isDead = isDead;
             _die = die;
-            _reborn = reborn;
-            _pauseDelegate = pauseDelegate;
+            pauseDelegate += Pause;
         }
 
         void Awake()
         {
             _changeMesh = new ChangeMesh(meshCollider, meshFilter);
             _direction = Vector3.forward;
-            _pauseDelegate = Pause;
+            _pauseDelegate += Pause;
             _reborn = Reborn;
         }
 
@@ -121,7 +120,7 @@ namespace Player
         public IInteractable Clone(Mesh newMesh, int key)
         {
             var clone = Instantiate(this);
-            clone.Construct(_positionController, _isPaused, _isDead, _die, _reborn, _pauseDelegate);
+            clone.Construct(_positionController, _isPaused, _isDead, _pauseDelegate, _die);
             clone.SetPosition(key);
             clone.SetMesh(newMesh);
             clone.DestroyPlayer = null;

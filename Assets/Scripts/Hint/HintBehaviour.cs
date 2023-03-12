@@ -38,8 +38,8 @@ public class HintBehaviour : MonoBehaviour
     }
     public HintBehaviour Clone()
     {
-        animator.SetBool(Play, true);
-        animator.SetBool(Play, false);
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
         return Instantiate(this);
     }
     private void OnDestroy()

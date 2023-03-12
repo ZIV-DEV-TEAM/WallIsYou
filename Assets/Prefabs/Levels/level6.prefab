@@ -218,7 +218,6 @@ Transform:
   m_Children:
   - {fileID: 2572410346539823705}
   - {fileID: 2572410346655045058}
-  - {fileID: 1610500392932997553}
   m_Father: {fileID: 8213708492542949967}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4198,7 +4197,6 @@ MonoBehaviour:
   - {fileID: 5793635700018433898}
   - {fileID: 5793635701471418082}
   - {fileID: 5793635700554582212}
-  - {fileID: 5793635699805027009}
   curentObstacles:
   - {fileID: 5175484214221321098}
   - {fileID: 7486210225509898650}
@@ -4597,6 +4595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984309005727478133, guid: 9609a17fc86d71347b2ae8a417edbe76,
+        type: 3}
+      propertyPath: ObstacleQuantity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8325579685938878524, guid: 9609a17fc86d71347b2ae8a417edbe76,
         type: 3}
@@ -5216,120 +5219,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8346341560319644777, guid: 2b4c9681648bb70409faa489c3ae7f56,
     type: 3}
   m_PrefabInstance: {fileID: 2572410345657228035}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798768f11f897a141ac153f917ecd2e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &2572410346371870376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2406479709264306011}
-    m_Modifications:
-    - target: {fileID: 808198395128480325, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: _obstacleService
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 808198395128480325, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: PlayerShapeNumber
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167064, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_Name
-      value: "\u0421ompleteTrigger"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 957184777970086260, guid: 2b4c9681648bb70409faa489c3ae7f56, type: 3}
-    - {fileID: 808198395128480325, guid: 2b4c9681648bb70409faa489c3ae7f56, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 2b4c9681648bb70409faa489c3ae7f56, type: 3}
---- !u!4 &1610500392932997553 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
-    type: 3}
-  m_PrefabInstance: {fileID: 2572410346371870376}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5793635699805027009 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8346341560319644777, guid: 2b4c9681648bb70409faa489c3ae7f56,
-    type: 3}
-  m_PrefabInstance: {fileID: 2572410346371870376}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -6325,7 +6214,7 @@ PrefabInstance:
     - target: {fileID: 6984309005727478133, guid: 9609a17fc86d71347b2ae8a417edbe76,
         type: 3}
       propertyPath: ObstacleQuantity
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8325579685938878524, guid: 9609a17fc86d71347b2ae8a417edbe76,
         type: 3}
@@ -6684,6 +6573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984309005727478133, guid: 9609a17fc86d71347b2ae8a417edbe76,
+        type: 3}
+      propertyPath: ObstacleQuantity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8325579685938878524, guid: 9609a17fc86d71347b2ae8a417edbe76,
         type: 3}
