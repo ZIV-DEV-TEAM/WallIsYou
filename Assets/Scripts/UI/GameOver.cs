@@ -29,7 +29,7 @@ namespace UI
 
       private void CheckScore()
       {
-         continueButton.gameObject.SetActive(score.Value > 3);
+         continueButton.gameObject.SetActive(score.Value > 1);
       }
    }
 }
