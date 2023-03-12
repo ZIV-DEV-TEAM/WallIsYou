@@ -7,8 +7,10 @@ using UnityEngine.UIElements;
 
 public class HintBehaviour : MonoBehaviour
 {
+    private const string Play = "Play";
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private float deviation;
+    [SerializeField] private Animator animator;
     private ObstacleService _obstacleService;
     private bool isDestroyed;
     public void SetObstacleService(ObstacleService obstacleService)
@@ -36,6 +38,8 @@ public class HintBehaviour : MonoBehaviour
     }
     public HintBehaviour Clone()
     {
+        animator.SetBool(Play, true);
+        animator.SetBool(Play, false);
         return Instantiate(this);
     }
     private void OnDestroy()
