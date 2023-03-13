@@ -3658,7 +3658,7 @@ PrefabInstance:
     - target: {fileID: 5607012985154367169, guid: ec4b7d61660a8724a898fd0c11244a0a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5607012985154367170, guid: ec4b7d61660a8724a898fd0c11244a0a,
         type: 3}
@@ -4321,6 +4321,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnHint
       objectReference: {fileID: 0}
+    - target: {fileID: 1439336770556941326, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: meshClone
+      value: 
+      objectReference: {fileID: 7357190114469381519, guid: 8ad15a3c17a34174380edf1656d6cc55,
+        type: 3}
     - target: {fileID: 3975901761335588995, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}
       propertyPath: m_RootOrder

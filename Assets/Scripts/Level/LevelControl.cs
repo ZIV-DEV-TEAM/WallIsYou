@@ -16,6 +16,7 @@ namespace Level
 
         private void Awake()
         {
+
             if (!PlayerPrefs.HasKey(_currentLevel))
             {
                 PlayerPrefs.SetInt(_currentLevel, 0);
@@ -30,7 +31,7 @@ namespace Level
 
         private void Instantiate(int level)
         {
-            if (level > levels.Length-1)
+            if (level >= levels.Length)
             {
                 level = 0;
                 PlayerPrefs.SetInt(_currentLevel, level);

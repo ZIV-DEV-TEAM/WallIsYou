@@ -1,10 +1,12 @@
 using Bank;
 using DG.Tweening;
 using OnlineLeaderboards;
+using System.Collections.Generic;
 using UI;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
 namespace Player
 {
@@ -25,6 +27,8 @@ namespace Player
         protected ChangeMesh _changeMesh;
         private float _currentSpeed;
         private event Die _die;
+        private bool _isClone;
+        private List<PlayerAction> _clones;
         public event UnityAction<Mesh> PlayerChangedMesh;
         public event UnityAction<Vector3> PlayerChangedPosition;
 
@@ -38,21 +42,24 @@ namespace Player
         public Score Score => score;
         public Death DeathBank => deathBank;
 
-        public void Construct(PositionController positionController,bool isPaused, bool isDead, PauseDelegate pauseDelegate, Die die)
+        public void Construct(PositionController positionController,bool isPaused, bool isDead, PauseDelegate pauseDelegate, Die die, List<PlayerAction> clones)
         {
             _positionController = positionController;
             _isPaused = isPaused;
             _isDead = isDead;
             _die = die;
-            pauseDelegate += Pause;
+            _isClone = true;
+            _clones = clones;
         }
 
         void Awake()
         {
+            if(_clones == null)
+                _clones = new();
             _changeMesh = new ChangeMesh(meshCollider, meshFilter);
             _direction = Vector3.forward;
             _pauseDelegate += Pause;
-            _reborn = Reborn;
+            _reborn += Reborn;
         }
 
         void FixedUpdate()
@@ -67,20 +74,57 @@ namespace Player
             score.Add(value);
         }
 
-        public void Die()
+        public void Die(bool isCallFromOriginal)
         {
+            if (isCallFromOriginal)
+            {
+                foreach (var item in _clones)
+                {
+                    item.Die(false);
+                }
+            }
             _isDead = true;
-            deathBank.Add(1);
-            _die?.Invoke();
+            _isPaused = true;
+            if (!_isClone)
+            {
+                deathBank.Add(1);
+                _die?.Invoke();
+            }
         }
-
-        private void Pause()
+        public void RemoveFromClones(PlayerAction player)
         {
+            _clones.Remove(player);
+        }
+        public void RemoveEverywhere()
+        {
+            foreach (var item in _clones)
+            {
+                item.RemoveFromClones(this);
+            }
+        }
+        public void Pause()
+        {
+            if (!_isClone)
+            {
+                foreach (var item in _clones)
+                {
+                    item.Pause();
+                }
+            }
             _isPaused = !_isPaused;
+            Debug.Log(name);
         }
 
-        private void Reborn()
+        public void Reborn()
         {
+            if (!_isClone)
+            {
+                foreach (var item in _clones)
+                {
+                    item.Reborn();
+                }
+            }
+            _isPaused = false;
             _isDead = false;
             transform.DOMoveZ(transform.position.z - 15, 0.5f);
         }
@@ -120,12 +164,23 @@ namespace Player
         public IInteractable Clone(Mesh newMesh, int key)
         {
             var clone = Instantiate(this);
-            clone.Construct(_positionController, _isPaused, _isDead, _pauseDelegate, _die);
+            List<PlayerAction> clonsAndPlayer = new();
+
+            foreach (var item in _clones)
+            {
+                if (item!=clone)
+                {
+                    clonsAndPlayer.Add(item);
+                }
+            }
+            clonsAndPlayer.Add(this);
+            clone.Construct(_positionController, _isPaused, _isDead, _pauseDelegate, _die, clonsAndPlayer);
             clone.SetPosition(key);
             clone.SetMesh(newMesh);
             clone.DestroyPlayer = null;
             clone.PlayerChangedMesh = null;
             clone.PlayerChangedPosition = null;
+            _clones.Add(clone);
             return clone;
         }
     }

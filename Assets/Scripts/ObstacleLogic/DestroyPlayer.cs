@@ -14,6 +14,7 @@ public class DestroyPlayer : MonoBehaviour
         }
         if (other.TryGetComponent(out IInteractable interactable))
         {
+            interactable.RemoveEverywhere();
             _isDestroyed = true;
             Destroy(other.gameObject);
         }
