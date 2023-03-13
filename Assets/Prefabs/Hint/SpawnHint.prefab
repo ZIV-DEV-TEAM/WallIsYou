@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4055981088322621672}
   - component: {fileID: 1439336770556941326}
   - component: {fileID: 6627032540699444431}
+  - component: {fileID: -1703155382145313254}
   m_Layer: 0
   m_Name: SpawnHint
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   hint: {fileID: 829367422720651419, guid: d6af2b3488267a6439285029a5af9b94, type: 3}
   positionController: {fileID: 0}
   obstacleService: {fileID: 0}
+  hintBehaviour: {fileID: 0}
 --- !u!114 &1439336770556941326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,3 +81,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1703155382145313254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900201327051321732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448727fb212e59f44a8c5cdd6930d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hints: []

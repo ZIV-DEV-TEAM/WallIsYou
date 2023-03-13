@@ -38,9 +38,12 @@ public class HintBehaviour : MonoBehaviour
     }
     public HintBehaviour Clone()
     {
+        return Instantiate(this);
+    }
+    public void RestartAnimation()
+    {
         gameObject.SetActive(false);
         gameObject.SetActive(true);
-        return Instantiate(this);
     }
     private void OnDestroy()
     {

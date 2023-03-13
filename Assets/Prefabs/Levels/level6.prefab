@@ -4775,6 +4775,7 @@ MonoBehaviour:
   hint: {fileID: 829367422720651419, guid: d6af2b3488267a6439285029a5af9b94, type: 3}
   positionController: {fileID: 8620019419523148718}
   obstacleService: {fileID: -1524261101587742229}
+  hintService: {fileID: 2183239881444596082}
 --- !u!114 &8747626688707081252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5084,6 +5085,7 @@ MonoBehaviour:
   hint: {fileID: 829367422720651419, guid: d6af2b3488267a6439285029a5af9b94, type: 3}
   positionController: {fileID: 8620019419523148718}
   obstacleService: {fileID: -1524261101587742229}
+  hintService: {fileID: 2183239881444596082}
 --- !u!114 &8935169935023195557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6695,6 +6697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4055981088322621672, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}
+      propertyPath: hintService
+      value: 
+      objectReference: {fileID: 2183239881444596082}
+    - target: {fileID: 4055981088322621672, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
       propertyPath: obstacleService
       value: 
       objectReference: {fileID: -1524261101587742229}
@@ -6705,6 +6712,18 @@ PrefabInstance:
       objectReference: {fileID: 8620019419523148718}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2fbe018a3fbae4384d8c08ec37503c, type: 3}
+--- !u!114 &2183239881444596082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1703155382145313254, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8507651741571321704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448727fb212e59f44a8c5cdd6930d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4700770343706851307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3975901761335588995, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
