@@ -1,25 +1,34 @@
+using System;
 using ObstacleLogic;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 public class HintBehaviour : MonoBehaviour
 {
-    private const string Play = "Play";
     [SerializeField] private MeshFilter meshFilter;
+    [SerializeField] private Renderer meshRenderer;
+    [SerializeField] private Material material;
     [SerializeField] private float deviation;
-    [SerializeField] private Animator animator;
     private ObstacleService _obstacleService;
-    private bool isDestroyed;
+    private bool _isDestroyed;
+
+    private void Start()
+    {
+        meshRenderer.materials = new Material[1]{material};
+        material.DOFade(0,1).SetLoops(-1, LoopType.Yoyo);
+    }
+
     public void SetObstacleService(ObstacleService obstacleService)
     {
         _obstacleService = obstacleService;
     }
     public void DestroyHint()
     {
-        if (!isDestroyed)
+        if (!_isDestroyed)
         {
             Destroy(gameObject);
         }
@@ -47,7 +56,8 @@ public class HintBehaviour : MonoBehaviour
     }
     private void OnDestroy()
     {
-        isDestroyed = true;
+        _isDestroyed = true;
         _obstacleService.ObtacleSwitch -= OnObstacleChanged;
+        material.color = Color.cyan;
     }
 }

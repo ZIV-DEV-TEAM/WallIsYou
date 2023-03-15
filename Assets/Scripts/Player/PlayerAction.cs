@@ -12,8 +12,6 @@ namespace Player
 {
     public class PlayerAction : MonoBehaviour, IInteractable, IInit<Die>
     {
-        public event UnityAction DestroyPlayer;
-
         [SerializeField] private Rigidbody rigidbody;
         [SerializeField] private float speed = 5f;
         [SerializeField] private Score score;
@@ -31,6 +29,8 @@ namespace Player
         private List<PlayerAction> _clones;
         public event UnityAction<Mesh> PlayerChangedMesh;
         public event UnityAction<Vector3> PlayerChangedPosition;
+        public event UnityAction DestroyPlayer;
+
 
         private Reborn _reborn;
 
@@ -42,7 +42,8 @@ namespace Player
         public Score Score => score;
         public Death DeathBank => deathBank;
 
-        public void Construct(PositionController positionController,bool isPaused, bool isDead, PauseDelegate pauseDelegate, Die die, List<PlayerAction> clones)
+        public void Construct(PositionController positionController, bool isPaused, bool isDead,
+            PauseDelegate pauseDelegate, Die die, List<PlayerAction> clones)
         {
             _positionController = positionController;
             _isPaused = isPaused;
@@ -54,7 +55,7 @@ namespace Player
 
         void Awake()
         {
-            if(_clones == null)
+            if (_clones == null)
                 _clones = new();
             _changeMesh = new ChangeMesh(meshCollider, meshFilter);
             _direction = Vector3.forward;
@@ -83,6 +84,7 @@ namespace Player
                     item.Die(false);
                 }
             }
+
             _isDead = true;
             _isPaused = true;
             if (!_isClone)
@@ -91,17 +93,20 @@ namespace Player
                 _die?.Invoke();
             }
         }
+
         public void RemoveFromClones(PlayerAction player)
         {
             _clones.Remove(player);
         }
+
         public void RemoveEverywhere()
         {
             foreach (var item in _clones)
-            {
+            {   
                 item.RemoveFromClones(this);
             }
         }
+
         public void Pause()
         {
             if (!_isClone)
@@ -111,6 +116,7 @@ namespace Player
                     item.Pause();
                 }
             }
+
             _isPaused = !_isPaused;
             Debug.Log(name);
         }
@@ -124,10 +130,12 @@ namespace Player
                     item.Reborn();
                 }
             }
+
             _isPaused = false;
             _isDead = false;
             transform.DOMoveZ(transform.position.z - 15, 0.5f);
         }
+
 
         public void Initialize(Die @delegate)
         {
@@ -145,7 +153,6 @@ namespace Player
             transform.DOMoveX(position.x, 0.5f);
             transform.DOMoveY(position.y, 0.5f);
             PlayerChangedPosition?.Invoke(position);
-            //transform.DORotate(new Vector3(0, transform.rotation.eulerAngles.y+180,  transform.rotation.eulerAngles.z+180), 0.5f);
         }
 
         private void OnDestroy()
@@ -155,6 +162,7 @@ namespace Player
             PlayerChangedMesh = null;
             PlayerChangedPosition = null;
         }
+
         public void SetMesh(Mesh newMesh)
         {
             _changeMesh.SetMesh(newMesh);
@@ -168,15 +176,17 @@ namespace Player
 
             foreach (var item in _clones)
             {
-                if (item!=clone)
+                if (item != clone)
                 {
                     clonsAndPlayer.Add(item);
                 }
             }
+
             clonsAndPlayer.Add(this);
             clone.Construct(_positionController, _isPaused, _isDead, _pauseDelegate, _die, clonsAndPlayer);
             clone.SetPosition(key);
             clone.SetMesh(newMesh);
+            
             clone.DestroyPlayer = null;
             clone.PlayerChangedMesh = null;
             clone.PlayerChangedPosition = null;
@@ -184,7 +194,7 @@ namespace Player
             return clone;
         }
     }
-    
+
     public delegate void Reborn();
 
     public delegate void Die();

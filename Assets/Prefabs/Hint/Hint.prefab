@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8830776207318971604}
   - component: {fileID: 1497266260683131595}
-  - component: {fileID: 2444637631776278852}
   - component: {fileID: 829367422720651419}
-  - component: {fileID: 387186026033326922}
+  - component: {fileID: 8409805991714992972}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -43,7 +42,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4197303693756907624}
   m_Mesh: {fileID: -5328094029326695549, guid: 5a7e4b7f68d79aa4c85008d30291bdf3, type: 3}
---- !u!23 &2444637631776278852
+--- !u!114 &829367422720651419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197303693756907624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fe6cbd29349464bbb09283df464422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshFilter: {fileID: 1497266260683131595}
+  meshRenderer: {fileID: 8409805991714992972}
+  material: {fileID: 2100000, guid: 709113c88fc9d32419c9bb212dc7214e, type: 2}
+  deviation: -0.7
+--- !u!23 &8409805991714992972
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,8 +77,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 709113c88fc9d32419c9bb212dc7214e, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,38 +99,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &829367422720651419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4197303693756907624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fe6cbd29349464bbb09283df464422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshFilter: {fileID: 1497266260683131595}
-  deviation: -0.7
-  animator: {fileID: 387186026033326922}
---- !u!95 &387186026033326922
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4197303693756907624}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 600c940bb64affa469c84702ea8bc096, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0

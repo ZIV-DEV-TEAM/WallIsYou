@@ -3209,6 +3209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnHint
       objectReference: {fileID: 0}
+    - target: {fileID: 900201327051321732, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3975901761335588995, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}
       propertyPath: m_RootOrder
