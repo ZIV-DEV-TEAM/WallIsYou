@@ -30,7 +30,9 @@ namespace Player
         public event UnityAction<Mesh> PlayerChangedMesh;
         public event UnityAction<Vector3> PlayerChangedPosition;
         public event UnityAction DestroyPlayer;
-
+        public event UnityAction ÑollideWithHintTrigger;
+        public event UnityAction<bool> PlayerPause;
+        public event UnityAction PlayerReborned;
 
         private Reborn _reborn;
 
@@ -69,7 +71,10 @@ namespace Player
             else _currentSpeed = speed;
             rigidbody.velocity = _direction * _currentSpeed;
         }
-
+        public void OnÑollideWithHintTrigger()
+        {
+            ÑollideWithHintTrigger?.Invoke();
+        }
         public void AddScore(int value = 1)
         {
             score.Add(value);
@@ -84,7 +89,7 @@ namespace Player
                     item.Die(false);
                 }
             }
-
+            meshCollider.enabled = false;
             _isDead = true;
             _isPaused = true;
             if (!_isClone)
@@ -116,8 +121,8 @@ namespace Player
                     item.Pause();
                 }
             }
-
             _isPaused = !_isPaused;
+            PlayerPause?.Invoke(_isPaused);
             Debug.Log(name);
         }
 
@@ -130,10 +135,9 @@ namespace Player
                     item.Reborn();
                 }
             }
-
             _isPaused = false;
             _isDead = false;
-            transform.DOMoveZ(transform.position.z - 15, 0.5f);
+            transform.DOMoveZ(transform.position.z - 15, 0.5f).OnKill(()=> meshCollider.enabled = true);
         }
 
 

@@ -11,7 +11,10 @@ namespace Player
         public event UnityAction DestroyPlayer;
         public event UnityAction<Mesh> PlayerChangedMesh;
         public event UnityAction<Vector3> PlayerChangedPosition;
+        public event UnityAction СollideWithHintTrigger;
+        public event UnityAction<bool> PlayerPause;
 
+        public void OnСollideWithHintTrigger();
         public void RemoveEverywhere();
         public void Die(bool isCallFromOriginal);
         public void AddScore(int score);

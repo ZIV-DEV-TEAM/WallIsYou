@@ -6,28 +6,51 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
+using DG.Tweening.Core;
 
 public class HintBehaviour : MonoBehaviour
 {
+    private const string HintAnimation = "HintAnimation";
+    [Header("Configurable parameters")]
+    [SerializeField] private float deviation;
+    [SerializeField] private float animationDuration = 1;
+    [Header("Other")]
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private Renderer meshRenderer;
     [SerializeField] private Material material;
-    [SerializeField] private float deviation;
+
     private ObstacleService _obstacleService;
     private bool _isDestroyed;
-
-    private void Start()
+    public void StartAnimation()
     {
-        meshRenderer.materials = new Material[1]{material};
-        material.DOFade(0,1).SetLoops(-1, LoopType.Yoyo);
+        meshRenderer.material.DOFade(1, animationDuration)
+            .OnComplete(()=>meshRenderer.material.DOFade(0, animationDuration))
+            .SetId(HintAnimation)
+            .OnKill(() => meshRenderer.material.DOFade(0, 0));
+        
     }
-
+    public void PauseAnimation(bool isPaused)
+    {
+        if (!isPaused)
+        {
+            DOTween.Play(HintAnimation);
+        }
+        else
+        {
+            DOTween.Pause(HintAnimation);
+        }
+    }
+    public void KillAnimation()
+    {
+        DOTween.Kill(HintAnimation);
+    }
     public void SetObstacleService(ObstacleService obstacleService)
     {
         _obstacleService = obstacleService;
     }
     public void DestroyHint()
     {
+        DOTween.Kill(HintAnimation);
         if (!_isDestroyed)
         {
             Destroy(gameObject);
@@ -49,15 +72,10 @@ public class HintBehaviour : MonoBehaviour
     {
         return Instantiate(this);
     }
-    public void RestartAnimation()
-    {
-        gameObject.SetActive(false);
-        gameObject.SetActive(true);
-    }
     private void OnDestroy()
     {
         _isDestroyed = true;
         _obstacleService.ObtacleSwitch -= OnObstacleChanged;
-        material.color = Color.cyan;
+        meshRenderer.material.color = Color.cyan;
     }
 }

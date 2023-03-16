@@ -10,7 +10,6 @@ public class SpawnHint : MonoBehaviour
     [SerializeField] private HintBehaviour hint;
     [SerializeField] private PositionController positionController;
     [SerializeField] private ObstacleService obstacleService;
-    [SerializeField] private HintService hintService;
 
     private void Start()
     {
@@ -25,8 +24,6 @@ public class SpawnHint : MonoBehaviour
         newHint.OnPlayerChangedMesh(meshClone);
         newHint.SetObstacleService(obstacleService);
         InitializeEvents(player, newHint);
-        hintService.Hints.Add(newHint);
-        hintService.UpdateAnimations();
     }
     private void InitializeEvents(IInteractable player, HintBehaviour newHint)
     {
@@ -34,6 +31,7 @@ public class SpawnHint : MonoBehaviour
         obstacleService.ObtacleSwitch += newHint.OnObstacleChanged;
         player.PlayerChangedPosition += newHint.OnPlayerChangedPosition;
         player.DestroyPlayer += newHint.DestroyHint;
-        player.DestroyPlayer += ()=> hintService.OnHintDestroyed(newHint);
+        player.ÑollideWithHintTrigger += newHint.StartAnimation;
+        player.PlayerPause += newHint.PauseAnimation;
     }
 }
