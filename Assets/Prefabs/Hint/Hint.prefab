@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fe6cbd29349464bbb09283df464422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviation: -0.7
+  deviation: -0.5
   animationDuration: 1
   meshFilter: {fileID: 1497266260683131595}
   meshRenderer: {fileID: 8409805991714992972}
