@@ -28,8 +28,8 @@ namespace Player
         private List<PlayerAction> _clones;
         public event UnityAction<Mesh> PlayerChangedMesh;
         public event UnityAction<Vector3> PlayerChangedPosition;
+        public event UnityAction –°olliderWithHintTrigger;
         public event UnityAction DestroyPlayer;
-        public event UnityAction —ollideWithHintTrigger;
         public event UnityAction<bool> PlayerPause;
         public event UnityAction PlayerReborned;
 
@@ -70,9 +70,9 @@ namespace Player
             else _currentSpeed = speed;
             rigidbody.velocity = _direction * _currentSpeed;
         }
-        public void On—ollideWithHintTrigger()
+        public void On–°olliderWithHintTrigger()
         {
-            —ollideWithHintTrigger?.Invoke();
+            –°olliderWithHintTrigger?.Invoke();
         }
         public void AddScore(int value = 1)
         {

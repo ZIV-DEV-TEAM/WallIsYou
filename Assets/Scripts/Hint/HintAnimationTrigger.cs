@@ -9,7 +9,7 @@ public class HintAnimationTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out IInteractable player))
         {
-            player.On—ollideWithHintTrigger();
+            player.On–°olliderWithHintTrigger();
         }
     }
 }

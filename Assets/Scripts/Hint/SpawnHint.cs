@@ -31,7 +31,7 @@ public class SpawnHint : MonoBehaviour
         obstacleService.ObtacleSwitch += newHint.OnObstacleChanged;
         player.PlayerChangedPosition += newHint.OnPlayerChangedPosition;
         player.DestroyPlayer += newHint.DestroyHint;
-        player.ÑollideWithHintTrigger += newHint.StartAnimation;
+        player.Ð¡olliderWithHintTrigger += newHint.StartAnimation;
         player.PlayerPause += newHint.PauseAnimation;
     }
 }
