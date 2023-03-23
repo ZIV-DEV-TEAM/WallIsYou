@@ -13,7 +13,6 @@ namespace ObstacleLogic
         [SerializeField] private MoveObstacle[] curentObstacles;
         private InputService _inputService;
 
-
         public void SetInputService(InputService inputService)
         {
             _inputService = inputService;
