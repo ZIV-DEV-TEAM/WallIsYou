@@ -44,6 +44,10 @@ namespace ObstacleLogic
                 _inputService.UnsubscribeFromJoystick(item.OnMove);
                 Destroy(item.gameObject);
             }
+            if (obstacles.Count <= 0)
+            {
+                return;
+            }
             MoveObstacle[] newCurrentObstacles = new MoveObstacle[obstacles[0].ObstacleQuantity];
             for (int i = 0; i < newCurrentObstacles.Length; i++)
             {
