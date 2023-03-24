@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstacleQuantity: 1
   moveSpeed: 5
-  rotateSpeed: 1.7
+  rotateSpeed: 2
 --- !u!1001 &2081355187952432900
 PrefabInstance:
   m_ObjectHideFlags: 0
