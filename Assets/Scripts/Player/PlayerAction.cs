@@ -17,6 +17,7 @@ namespace Player
         [SerializeField] private Death deathBank;
         [SerializeField] private MeshFilter meshFilter;
         [SerializeField] private MeshCollider meshCollider;
+        [SerializeField] private AudioSource dieAudio;
         private PositionController _positionController;
 
         public bool _isPaused;
@@ -87,6 +88,7 @@ namespace Player
                 {
                     item.Die(false);
                 }
+                dieAudio.Play();
             }
             meshCollider.enabled = false;
             _isDead = true;
