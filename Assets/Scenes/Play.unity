@@ -6948,6 +6948,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixerGroup: {fileID: 24300002, guid: 69ffbae5153a01d4f821a1f23083e549, type: 2}
+  muteValue: -50
+  pause: {fileID: 1132159216}
+  pauseButton: {fileID: 467514856}
 --- !u!4 &1885611096
 Transform:
   m_ObjectHideFlags: 0
