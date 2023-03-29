@@ -916,7 +916,6 @@ GameObject:
   - component: {fileID: 6768720195923870641}
   - component: {fileID: 1050835872893062946}
   - component: {fileID: 4212239051112681858}
-  - component: {fileID: 5018740993404211439}
   m_Layer: 0
   m_Name: ChangeMeshTrigger
   m_TagString: Untagged
@@ -1006,20 +1005,6 @@ MonoBehaviour:
   hint: {fileID: 829367422720651419, guid: d6af2b3488267a6439285029a5af9b94, type: 3}
   positionController: {fileID: 7046296143556186232}
   obstacleService: {fileID: 4230182525787122088}
---- !u!114 &5018740993404211439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3663469540042201078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7310a3dc61ff95745ae26bc2d1dfee03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourcesForPlay:
-  - {fileID: 4161135582199951966}
 --- !u!1 &3816099558278395809
 GameObject:
   m_ObjectHideFlags: 0
@@ -10275,7 +10260,7 @@ PrefabInstance:
     - target: {fileID: 4682025056322327275, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -115
+      value: -161.48
       objectReference: {fileID: 0}
     - target: {fileID: 4682025056322327275, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
@@ -11511,6 +11496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpawnHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 900201327051321732, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1439336770556941326, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}

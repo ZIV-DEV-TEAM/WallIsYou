@@ -4095,6 +4095,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChangeMeshTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 5607012985154367169, guid: ec4b7d61660a8724a898fd0c11244a0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5607012985154367170, guid: ec4b7d61660a8724a898fd0c11244a0a,
         type: 3}
       propertyPath: mesh
@@ -5122,7 +5127,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mesh
       value: 
-      objectReference: {fileID: -4909101990953238325, guid: 8ad15a3c17a34174380edf1656d6cc55,
+      objectReference: {fileID: 7357190114469381519, guid: 215d4c3b0183f5b41b46a129f0720cea,
         type: 3}
     - target: {fileID: 4960804570320969625, guid: 9609a17fc86d71347b2ae8a417edbe76,
         type: 3}
@@ -6236,6 +6241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnHint
       objectReference: {fileID: 0}
+    - target: {fileID: 900201327051321732, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1439336770556941326, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}
       propertyPath: idPoint
@@ -6313,9 +6323,24 @@ PrefabInstance:
       objectReference: {fileID: 2572506058990443569}
     - target: {fileID: 6306784841089971796, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306784841089971796, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 34bf4e9f58e68f046ba0b01b3b754999, type: 3}
+    - target: {fileID: 8381046756821067052, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: audioSourcesForPlay.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381046756821067052, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+        type: 3}
+      propertyPath: audioSourcesForPlay.Array.data[0]
+      value: 
+      objectReference: {fileID: 3588158964509721567}
     m_RemovedComponents:
     - {fileID: -1703155382145313254, guid: 0e2fbe018a3fbae4384d8c08ec37503c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e2fbe018a3fbae4384d8c08ec37503c, type: 3}

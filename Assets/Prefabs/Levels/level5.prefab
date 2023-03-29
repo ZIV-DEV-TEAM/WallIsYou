@@ -3709,7 +3709,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3050515031819432422, guid: ec4b7d61660a8724a898fd0c11244a0a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec4b7d61660a8724a898fd0c11244a0a, type: 3}
 --- !u!4 &5607012984639624226 stripped
 Transform:
@@ -3717,25 +3718,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2136111844}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5607012984639624229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5607012985154367169, guid: ec4b7d61660a8724a898fd0c11244a0a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2136111844}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8049125607456710232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5607012984639624229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7310a3dc61ff95745ae26bc2d1dfee03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourcesForPlay: []
 --- !u!1001 &666920759638781443
 PrefabInstance:
   m_ObjectHideFlags: 0
