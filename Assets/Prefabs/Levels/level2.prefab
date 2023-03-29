@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 7929549744791658038}
   - component: {fileID: -4497469420657624178}
   - component: {fileID: 5410039227056926047}
+  - component: {fileID: 2905202640730065924}
   m_Layer: 0
   m_Name: level2
   m_TagString: Untagged
@@ -877,6 +878,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finish: {fileID: 6206478086118843951}
   positionController: {fileID: 5704111951129942029}
+--- !u!114 &2905202640730065924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296037925977375884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3021f5cac11ae3f49a08ec37c9807567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioWithTrigger:
+  - {fileID: 8560452783253534681}
 --- !u!1 &7602588575929845814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,18 +2755,6 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1960570853800589013}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1944832491407679689 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 128412053541656092, guid: 895c063584f1b0348b5118c2509241cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1960570853800589013}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &2327161460297472066 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4287116548394856087, guid: 895c063584f1b0348b5118c2509241cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1960570853800589013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &2327346929129617697 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4285524133172301812, guid: 895c063584f1b0348b5118c2509241cd,
@@ -2761,12 +2764,6 @@ AudioSource:
 --- !u!4 &6360839131110152087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4860340232722915650, guid: 895c063584f1b0348b5118c2509241cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1960570853800589013}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &7232534064740292239 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 9181229561575465050, guid: 895c063584f1b0348b5118c2509241cd,
     type: 3}
   m_PrefabInstance: {fileID: 1960570853800589013}
   m_PrefabAsset: {fileID: 0}
@@ -3011,6 +3008,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2398981636624007565}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &8560452783253534681 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6306784841089971796, guid: 0e2fbe018a3fbae4384d8c08ec37503c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2398981636624007565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3667083519904605567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3021,23 +3024,23 @@ PrefabInstance:
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.data[0]
       value: 
-      objectReference: {fileID: 1944832491407679689}
+      objectReference: {fileID: 8560452783253534681}
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.data[1]
       value: 
-      objectReference: {fileID: 7232534064740292239}
+      objectReference: {fileID: 0}
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.data[2]
       value: 
-      objectReference: {fileID: 2327161460297472066}
+      objectReference: {fileID: 0}
     - target: {fileID: 4682025056322327275, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: m_RootOrder
@@ -3868,7 +3871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourcesForPlay:
-  - {fileID: 1944832491407679689}
+  - {fileID: 0}
 --- !u!1001 &7602588576357057006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4145,7 +4148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourcesForPlay:
-  - {fileID: 7232534064740292239}
+  - {fileID: 0}
 --- !u!4 &6659555013938107501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,

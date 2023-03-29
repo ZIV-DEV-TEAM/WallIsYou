@@ -13,6 +13,7 @@ namespace Player
         public event UnityAction<Vector3> PlayerChangedPosition;
         public event UnityAction СolliderWithHintTrigger;
         public event UnityAction<bool> PlayerPause;
+        public event UnityAction PlayerReborn;
 
         public void OnСolliderWithHintTrigger();
         public void RemoveEverywhere();

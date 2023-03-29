@@ -33,6 +33,7 @@ namespace Player
         public event UnityAction DestroyPlayer;
         public event UnityAction<bool> PlayerPause;
         public event UnityAction PlayerReborned;
+        public event UnityAction PlayerReborn;
 
         private Reborn _reborn;
 
@@ -136,6 +137,7 @@ namespace Player
                     item.Reborn();
                 }
             }
+            PlayerReborn?.Invoke();
             _isPaused = false;
             _isDead = false;
             transform.DOMoveZ(transform.position.z - 15, 0.5f).OnKill(()=> meshCollider.enabled = true);
