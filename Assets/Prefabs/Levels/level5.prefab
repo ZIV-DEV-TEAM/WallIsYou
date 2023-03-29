@@ -4316,7 +4316,7 @@ PrefabInstance:
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
@@ -4327,12 +4327,12 @@ PrefabInstance:
         type: 3}
       propertyPath: audioWithTrigger.Array.data[1]
       value: 
-      objectReference: {fileID: 6807723573817837424}
+      objectReference: {fileID: 0}
     - target: {fileID: 1168686828414104527, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: audioWithTrigger.Array.data[2]
       value: 
-      objectReference: {fileID: 1904256182792767933}
+      objectReference: {fileID: 0}
     - target: {fileID: 4682025056322327275, guid: c35cbb63a858fac4e80d0ed855389048,
         type: 3}
       propertyPath: m_RootOrder
@@ -4590,12 +4590,6 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 2383427993586525994}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1904256182792767933 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4287116548394856087, guid: 895c063584f1b0348b5118c2509241cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2383427993586525994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &2367650083128275254 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 128412053541656092, guid: 895c063584f1b0348b5118c2509241cd,
@@ -4611,12 +4605,6 @@ AudioSource:
 --- !u!82 &5224275002649199395 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7607698311724246025, guid: 895c063584f1b0348b5118c2509241cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2383427993586525994}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &6807723573817837424 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 9181229561575465050, guid: 895c063584f1b0348b5118c2509241cd,
     type: 3}
   m_PrefabInstance: {fileID: 2383427993586525994}
   m_PrefabAsset: {fileID: 0}
