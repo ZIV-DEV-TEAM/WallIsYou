@@ -30,8 +30,15 @@ public class SoundService : MonoBehaviour
     {
         audioMixerGroup.audioMixer.GetFloat(Music, out var musicValue);
         if (_isPaused)
-            audioMixerGroup.audioMixer.SetFloat(Music, muteValue);
-        else if ((int)musicValue != PlayerPrefs.GetInt(Music))
+        {
+            if (PlayerPrefs.GetInt(Music) >= muteValue)
+                PlayerPrefs.SetInt(Music, muteValue);
+        }
+        else if(musicValue == muteValue)
+        {
+            PlayerPrefs.SetInt(Music, 0);
+        }
+        if ((int)musicValue != PlayerPrefs.GetInt(Music))
         {
             audioMixerGroup.audioMixer.SetFloat(Music, PlayerPrefs.GetInt(Music));
         }

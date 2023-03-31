@@ -13,7 +13,7 @@ namespace UI.PausePanel
 
         private void Start()
         {
-            vibration.isOn = PlayerPrefs.GetInt("Vibrate") != 0;
+            vibration.isOn = PlayerPrefs.GetInt("Vibrate") == 0;
             effect.onValueChanged.AddListener(OnEffect);
             music.onValueChanged.AddListener(OnMusic);
         }
