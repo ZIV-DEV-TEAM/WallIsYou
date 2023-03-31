@@ -42,7 +42,7 @@ public class SoundService : MonoBehaviour
         {
             audioMixerGroup.audioMixer.SetFloat(Music, PlayerPrefs.GetInt(Music));
         }
-        audioMixerGroup.audioMixer.GetFloat(Music, out var effectValue);
+        audioMixerGroup.audioMixer.GetFloat(Effects, out var effectValue);
         if ((int)effectValue != PlayerPrefs.GetInt(Effects))
             audioMixerGroup.audioMixer.SetFloat(Effects, PlayerPrefs.GetInt(Effects));
     }
