@@ -3845,7 +3845,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7602588575986575447}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6659555013308874575}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 798768f11f897a141ac153f917ecd2e6, type: 3}
@@ -3857,26 +3857,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7602588575986575447}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6659555013308874575 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3885106777434167064, guid: 2b4c9681648bb70409faa489c3ae7f56,
-    type: 3}
-  m_PrefabInstance: {fileID: 7602588575986575447}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6768165928788770296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6659555013308874575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7310a3dc61ff95745ae26bc2d1dfee03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourcesForPlay:
-  - {fileID: 0}
 --- !u!1001 &7602588576357057006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4128,32 +4108,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7602588577521648500}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6659555013938107500}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 798768f11f897a141ac153f917ecd2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6659555013938107500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3885106777434167064, guid: 2b4c9681648bb70409faa489c3ae7f56,
-    type: 3}
-  m_PrefabInstance: {fileID: 7602588577521648500}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3843594000194573948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6659555013938107500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7310a3dc61ff95745ae26bc2d1dfee03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourcesForPlay:
-  - {fileID: 0}
 --- !u!4 &6659555013938107501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3885106777434167065, guid: 2b4c9681648bb70409faa489c3ae7f56,
