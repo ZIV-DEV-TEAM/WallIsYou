@@ -1,6 +1,8 @@
 Описание игры.  
 "Wall Is You" - мобильная 3D логическая игра с элементами Runner. Игрок управляет препятствием, а не фигурой.  
   
+Play market: https://play.google.com/store/apps/details?id=com.ZIVgames.wallisyou  
+  
 Движок: Unity  
 Платформа: Mobile (Прототип на Android - Google Play. Если тесты хорошие то в IOS - App Store)  
 ЦА: Широкая аудитория. Взрослые и дети.  
@@ -36,5 +38,3 @@ UA аналитик.
 Тимур. Sound Designer  
   
 Егор. Senior разработчик на Unity.  
-  
-Дата окончания разработки.  
