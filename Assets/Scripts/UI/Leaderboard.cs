@@ -9,6 +9,7 @@ namespace UI
     {
         
         [SerializeField] private Button closeButton;
+        [SerializeField] private Button continueButton;
         [SerializeField] private LeaderboardController leaderboard;
         [SerializeField] private PlayerInfo playerInfo;
         private LeaderboardDelegate _leaderboardDelegate;
@@ -26,6 +27,8 @@ namespace UI
         {
             closeButton.onClick.RemoveAllListeners();
             closeButton.onClick.AddListener(action);
+            continueButton.onClick.RemoveAllListeners();
+            continueButton.onClick.AddListener(action);
             StartCoroutine(leaderboard.SubmitScoreRoutine(dieCount));
         }
 

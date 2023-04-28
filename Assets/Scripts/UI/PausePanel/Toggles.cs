@@ -7,13 +7,21 @@ namespace UI.PausePanel
 {
     public class Toggles : MonoBehaviour
     {
+        private const string VibrateText = "Vibrate";
+        private const string Music = "Music";
+        private const string Effects = "Effects";
         [SerializeField] private Toggle effect;
         [SerializeField] private Toggle music;
         [SerializeField] private Toggle vibration;
 
         private void Start()
         {
-            vibration.isOn = PlayerPrefs.GetInt("Vibrate") != 0;
+            if(PlayerPrefs.HasKey(VibrateText))
+                vibration.isOn = PlayerPrefs.GetInt(VibrateText) == 1;
+            if (PlayerPrefs.HasKey(Music))
+                music.isOn = PlayerPrefs.GetInt(Music) == 0;
+            if (PlayerPrefs.HasKey(Effects))
+                effect.isOn = PlayerPrefs.GetInt(Effects) == 0;
             effect.onValueChanged.AddListener(OnEffect);
             music.onValueChanged.AddListener(OnMusic);
         }

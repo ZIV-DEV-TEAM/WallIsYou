@@ -13,7 +13,6 @@ namespace ObstacleLogic
         [SerializeField] private MoveObstacle[] curentObstacles;
         private InputService _inputService;
 
-
         public void SetInputService(InputService inputService)
         {
             _inputService = inputService;
@@ -43,6 +42,10 @@ namespace ObstacleLogic
                 _inputService.UnsubscribeFromArrows(item.OnRotate);
                 _inputService.UnsubscribeFromJoystick(item.OnMove);
                 Destroy(item.gameObject);
+            }
+            if (obstacles.Count <= 0)
+            {
+                return;
             }
             MoveObstacle[] newCurrentObstacles = new MoveObstacle[obstacles[0].ObstacleQuantity];
             for (int i = 0; i < newCurrentObstacles.Length; i++)

@@ -20,12 +20,18 @@ public class SpawnHint : MonoBehaviour
         HintBehaviour newHint = hint.Clone();
         Position position = positionController.GetPosition(idPoint);
         newHint.transform.position = new Vector3(position.transform.position.x, position.transform.position.y, obstacleService.GetCurentZPosition());
-        player.DestroyPlayer += newHint.DestroyHint;
         newHint.OnPlayerChangedPosition(position.transform.position);
-        player.PlayerChangedPosition += newHint.OnPlayerChangedPosition;
         newHint.OnPlayerChangedMesh(meshClone);
+        newHint.SetObstacleService(obstacleService);
+        InitializeEvents(player, newHint);
+    }
+    private void InitializeEvents(IInteractable player, HintBehaviour newHint)
+    {
         player.PlayerChangedMesh += newHint.OnPlayerChangedMesh;
         obstacleService.ObtacleSwitch += newHint.OnObstacleChanged;
-        newHint.SetObstacleService(obstacleService);
+        player.PlayerChangedPosition += newHint.OnPlayerChangedPosition;
+        player.DestroyPlayer += newHint.DestroyHint;
+        player.СolliderWithHintTrigger += newHint.StartAnimation;
+        player.PlayerPause += newHint.PauseAnimation;
     }
 }

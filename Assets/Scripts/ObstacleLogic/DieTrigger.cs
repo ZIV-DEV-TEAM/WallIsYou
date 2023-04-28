@@ -15,7 +15,7 @@ namespace ObstacleLogic
         {
             if (collision.gameObject.TryGetComponent(out IInteractable playerAction))
             {
-                playerAction.Die();
+                playerAction.Die(true);
             }
         }
     }

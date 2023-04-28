@@ -8,8 +8,8 @@ namespace Level
         private string _currentLevel = "CurrentLevel";
 
         private event WinDelegate _win;
-    
 
+        private bool _isFinished;
         public void SubscribeWin(WinDelegate winDelegate)
         {
             _win += winDelegate;
@@ -17,6 +17,9 @@ namespace Level
 
         private void OnTriggerEnter(Collider other)
         {
+            if (_isFinished)
+                return;
+            _isFinished = true;
             int currentLevel =  PlayerPrefs.GetInt(_currentLevel);
             currentLevel++;
             Debug.Log("Restart scene");
